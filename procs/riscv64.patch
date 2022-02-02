@@ -8,6 +8,6 @@ Index: PKGBUILD
      cd "$pkgname-$pkgver"
 +    echo -e "\n[patch.crates-io]\ndockworker = { git = 'https://github.com/felixonmars/dockworker' }" >> Cargo.toml
 +    cargo update -p nix
-     cargo build --release --locked
+     cargo build --release --frozen
  
      "target/release/$pkgname" --completion zsh
